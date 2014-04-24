@@ -1,0 +1,15 @@
+<h1>Index Page! Grocery List:</h1>
+
+<%#= link_to "New Item", new_item_path %>
+
+<% @items.each do |item| %>
+    <li> 
+    	<%= item.amount %> <%= item.title %> -- <%=item.description%> 
+    	<%= link_to "E", edit_item_path(item[:id]), :class => "btn btn-primary btn-xs index" %>
+    	<%= link_to "D", item, method: :Delete, data: {confirm: "Are you sure?"}, :class => "btn btn-danger btn-xs index" %>
+    </li>
+<% end %>
+
+<%= button_to "Add New Item", {controller: :items, action: :new}, :method => :get, :class => "btn btn-success add" %>
+
+<h3>Items on list: <%= @items.length %></h3>
