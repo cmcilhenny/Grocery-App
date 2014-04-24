@@ -13,9 +13,14 @@ li {
 	padding: 3px 0px;
 }
 
-.index {
+.edit {
+	margin: 0px 6px;
 	float: right;
-	margin: 0px 3px;
+}
+
+.delete {
+	padding: 0px;
+	float: right;
 }
 
 .add {
@@ -23,4 +28,11 @@ li {
 	margin: 6px 3px;
 }
 
+.amount {
+	width: 50px;
+	padding: 3px 6px;
+}
 
+.submit {
+	display: inline;
+}
